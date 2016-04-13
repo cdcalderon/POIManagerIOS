@@ -10,6 +10,8 @@
 
 @interface POIListViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end
 
