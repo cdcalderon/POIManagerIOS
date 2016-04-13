@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-
+#import "POIRecord.h"
 @class Contact, FSCategory, Location, Menu;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Venue : NSManagedObject
+@interface Venue : POIRecord
 
 // Insert code here to declare functionality of your managed object subclass
 

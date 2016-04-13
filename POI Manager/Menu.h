@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "POIRecord.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Menu : NSManagedObject
+@interface Menu : POIRecord
 
 // Insert code here to declare functionality of your managed object subclass
 
