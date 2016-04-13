@@ -6,13 +6,13 @@
 //  Copyright © 2016 carlos calderon. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "POIListViewController.h"
 
-@interface ViewController ()
+@interface POIListViewController ()
 
 @end
 
-@implementation ViewController
+@implementation POIListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
