@@ -75,6 +75,7 @@
 		07F266AD1CBE391000621DD2 /* AFMMRecordResponseSerializer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AFMMRecordResponseSerializer; sourceTree = "<group>"; };
 		07F266B01CBF60C800621DD2 /* POIFourSquareSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIFourSquareSessionManager.h; sourceTree = "<group>"; };
 		07F266B11CBF60C800621DD2 /* POIFourSquareSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIFourSquareSessionManager.m; sourceTree = "<group>"; };
+		07F266B31CBF68B100621DD2 /* POIManager-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POIManager-Prefix.pch"; sourceTree = "<group>"; };
 		91C38826B25AC96AF803E034 /* Pods-POI Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POI Manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-POI Manager/Pods-POI Manager.release.xcconfig"; sourceTree = "<group>"; };
 		B5446D16E2141239A63174A5 /* libPods-POI Manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-POI Manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				07F266201CBDC78E00621DD2 /* main.m */,
+				07F266B31CBF68B100621DD2 /* POIManager-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
