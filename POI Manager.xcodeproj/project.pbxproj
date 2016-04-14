@@ -13,7 +13,6 @@
 		07F2662A1CBDC78E00621DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F266281CBDC78E00621DD2 /* Main.storyboard */; };
 		07F2662C1CBDC78E00621DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F2662B1CBDC78E00621DD2 /* Assets.xcassets */; };
 		07F2662F1CBDC78E00621DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F2662D1CBDC78E00621DD2 /* LaunchScreen.storyboard */; };
-		07F2666C1CBE242600621DD2 /* AFMMRecordResponseSerializer in Resources */ = {isa = PBXBuildFile; fileRef = 07F2666B1CBE242600621DD2 /* AFMMRecordResponseSerializer */; };
 		07F2666F1CBE25D200621DD2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F2666E1CBE25D200621DD2 /* MapViewController.m */; };
 		07F266741CBE27E400621DD2 /* POIManagerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07F266721CBE27E400621DD2 /* POIManagerModel.xcdatamodeld */; };
 		07F266761CBE282B00621DD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F266751CBE282B00621DD2 /* CoreData.framework */; };
@@ -28,8 +27,9 @@
 		07F266931CBE2CA200621DD2 /* Venue+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266881CBE2CA200621DD2 /* Venue+CoreDataProperties.m */; };
 		07F266941CBE2CA200621DD2 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F2668A1CBE2CA200621DD2 /* Venue.m */; };
 		07F266981CBE2D9E00621DD2 /* POIRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266971CBE2D9E00621DD2 /* POIRecord.m */; };
-		07F266AE1CBE391000621DD2 /* AFMMRecordResponseSerializer in Resources */ = {isa = PBXBuildFile; fileRef = 07F266AD1CBE391000621DD2 /* AFMMRecordResponseSerializer */; };
 		07F266B21CBF60C800621DD2 /* POIFourSquareSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266B11CBF60C800621DD2 /* POIFourSquareSessionManager.m */; };
+		07F266C01CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266BD1CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m */; };
+		07F266C11CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266BF1CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.m */; };
 		F1256E49B3F309D3756A2A6E /* libPods-POI Manager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5446D16E2141239A63174A5 /* libPods-POI Manager.a */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		07F2662B1CBDC78E00621DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07F2662E1CBDC78E00621DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07F266301CBDC78E00621DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07F2666B1CBE242600621DD2 /* AFMMRecordResponseSerializer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AFMMRecordResponseSerializer; path = "/Users/carlos/Downloads/MMRecord-master/Source/AFMMRecordResponseSerializer"; sourceTree = "<absolute>"; };
 		07F2666D1CBE25D200621DD2 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		07F2666E1CBE25D200621DD2 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		07F266731CBE27E400621DD2 /* POIManagerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = POIManagerModel.xcdatamodel; sourceTree = "<group>"; };
@@ -72,10 +71,13 @@
 		07F2668A1CBE2CA200621DD2 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		07F266961CBE2D9E00621DD2 /* POIRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIRecord.h; sourceTree = "<group>"; };
 		07F266971CBE2D9E00621DD2 /* POIRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIRecord.m; sourceTree = "<group>"; };
-		07F266AD1CBE391000621DD2 /* AFMMRecordResponseSerializer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AFMMRecordResponseSerializer; sourceTree = "<group>"; };
 		07F266B01CBF60C800621DD2 /* POIFourSquareSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIFourSquareSessionManager.h; sourceTree = "<group>"; };
 		07F266B11CBF60C800621DD2 /* POIFourSquareSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIFourSquareSessionManager.m; sourceTree = "<group>"; };
 		07F266B31CBF68B100621DD2 /* POIManager-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POIManager-Prefix.pch"; sourceTree = "<group>"; };
+		07F266BC1CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializationMapper.h; sourceTree = "<group>"; };
+		07F266BD1CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializationMapper.m; sourceTree = "<group>"; };
+		07F266BE1CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializer.h; sourceTree = "<group>"; };
+		07F266BF1CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializer.m; sourceTree = "<group>"; };
 		91C38826B25AC96AF803E034 /* Pods-POI Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POI Manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-POI Manager/Pods-POI Manager.release.xcconfig"; sourceTree = "<group>"; };
 		B5446D16E2141239A63174A5 /* libPods-POI Manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-POI Manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,7 +142,10 @@
 		07F266361CBDD32B00621DD2 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				07F266AD1CBE391000621DD2 /* AFMMRecordResponseSerializer */,
+				07F266BC1CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.h */,
+				07F266BD1CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m */,
+				07F266BE1CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.h */,
+				07F266BF1CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.m */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -283,10 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F2662F1CBDC78E00621DD2 /* LaunchScreen.storyboard in Resources */,
-				07F2666C1CBE242600621DD2 /* AFMMRecordResponseSerializer in Resources */,
 				07F2662C1CBDC78E00621DD2 /* Assets.xcassets in Resources */,
 				07F2662A1CBDC78E00621DD2 /* Main.storyboard in Resources */,
-				07F266AE1CBE391000621DD2 /* AFMMRecordResponseSerializer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +358,10 @@
 				07F266901CBE2CA200621DD2 /* Location.m in Sources */,
 				07F266921CBE2CA200621DD2 /* Contact.m in Sources */,
 				07F2668B1CBE2CA200621DD2 /* FSCategory+CoreDataProperties.m in Sources */,
+				07F266C01CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m in Sources */,
 				07F2668D1CBE2CA200621DD2 /* Menu+CoreDataProperties.m in Sources */,
 				07F266241CBDC78E00621DD2 /* AppDelegate.m in Sources */,
+				07F266C11CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.m in Sources */,
 				07F266211CBDC78E00621DD2 /* main.m in Sources */,
 				07F2666F1CBE25D200621DD2 /* MapViewController.m in Sources */,
 				07F266981CBE2D9E00621DD2 /* POIRecord.m in Sources */,
