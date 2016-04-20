@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface POIListViewController : UIViewController
+@interface POIListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender;

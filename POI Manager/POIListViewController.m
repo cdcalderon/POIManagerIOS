@@ -11,6 +11,10 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "AFMMRecordResponseSerializationMapper.h"
 #import "AFMMRecordResponseSerializer.h"
+#import "Venue.h"
+#import "Location.h"
+#import "MapViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 //Client id
 //RODUBYAI1CMKTSLDI04NLRU53HXLKSWR43GYICGD3CUPP0FN
@@ -21,7 +25,10 @@ static NSString * const kCLIENTID = @"RODUBYAI1CMKTSLDI04NLRU53HXLKSWR43GYICGD3C
 
 static NSString * const kCLIENTSECRET = @"VG5P3M0XMPZ1ZHMW3UTUJHM2R3QPSU4FATDKCKYLGC1IY5VS";
 
-@interface POIListViewController ()
+@interface POIListViewController () <CLLocationManagerDelegate>
+
+@property (strong, nonatomic) NSArray *venues;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -29,6 +36,16 @@ static NSString * const kCLIENTSECRET = @"VG5P3M0XMPZ1ZHMW3UTUJHM2R3QPSU4FATDKCK
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate=self;
+    self.locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
+    self.locationManager.distanceFilter=10.0;
+    [self.locationManager requestAlwaysAuthorization];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8) {
+        [_locationManager requestAlwaysAuthorization];
+    }
     
     POIFourSquareSessionManager *sessionManager = [POIFourSquareSessionManager sharedClient];
     
@@ -43,14 +60,80 @@ static NSString * const kCLIENTSECRET = @"VG5P3M0XMPZ1ZHMW3UTUJHM2R3QPSU4FATDKCK
     AFMMRecordResponseSerializer *serializer = [AFMMRecordResponseSerializer serializerWithManagedObjectContext:context responseObjectSerializer:HTTPResponseSerializer entityMapper:mapper];
     
     sessionManager.responseSerializer = serializer;
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+#pragma mark - CLLocationManagerDelegate
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+{
+    CLLocation *location = [locations lastObject];
+    
+    [self.locationManager stopUpdatingLocation];
+    
+    [[POIFourSquareSessionManager sharedClient] GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude, location.coordinate.longitude] parameters:@{@"client_id" : kCLIENTID, @"client_secret" : kCLIENTSECRET ,@"v": @"20140416"}
+                                            success:^(NSURLSessionDataTask *task, id responseObject) {
+                                                NSLog(@"%@",responseObject);
+                                                NSArray *venues = responseObject;
+                                                self.venues = venues;
+                                                [self.tableView reloadData];
+                                            } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                                NSLog(@"Error");
+                                            }];
+
+}
+
+#pragma mark - Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = sender;
+    Venue *venue = self.venues[indexPath.row];
+    MapViewController *mapVC = segue.destinationViewController;
+    mapVC.venue = venue;
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.venues count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    Venue *venue = self.venues[indexPath.row];
+    cell.textLabel.text = venue.name;
+    cell.detailTextLabel.text = venue.location.address;
+    return cell;
+}
+    
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender {
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"listToMapSegue" sender:indexPath];
 }
+
+#pragma mark - IBActions
+
+- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender {
+    
+    [self.locationManager startUpdatingLocation];
+}
+
 @end

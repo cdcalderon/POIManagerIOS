@@ -59,7 +59,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6lY-hA-G8Y" id="434-en-d83"/>
-                        <segue destination="SBg-LP-LYa" kind="show" identifier="listToMapSegue" id="coF-eL-0OL"/>
+                        <segue destination="SBg-LP-LYa" kind="push" identifier="listToMapSegue" id="coF-eL-0OL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,18 +79,84 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9wN-Hv-8Qp">
-                                <rect key="frame" x="0.0" y="-5" width="600" height="605"/>
+                                <rect key="frame" x="0.0" y="56" width="600" height="433"/>
                             </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30c-CD-3D3">
+                                <rect key="frame" x="0.0" y="485" width="600" height="115"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-cn-epb">
+                                        <rect key="frame" x="20" y="49" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8c-Zr-lkZ">
+                                        <rect key="frame" x="20" y="20" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndR-VK-23c">
+                                <rect key="frame" x="0.0" y="6" width="600" height="44"/>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eNw-Pu-gMs">
+                        <barButtonItem key="rightBarButtonItem" title="Show Directions" id="Ybk-Ix-lYJ">
+                            <connections>
+                                <action selector="showDirectionsBarButtonPressed:" destination="SBg-LP-LYa" id="5Tn-EL-h61"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addressLabel" destination="8Fe-cn-epb" id="sRZ-cM-Hj3"/>
                         <outlet property="mapVIew" destination="9wN-Hv-8Qp" id="Own-wg-pRY"/>
+                        <outlet property="nameLabel" destination="w8c-Zr-lkZ" id="5Lc-qz-Hx2"/>
+                        <segue destination="bvh-V8-VTd" kind="push" identifier="mapToDIrectionsSegue" id="3Ba-if-6Az"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnE-4j-IK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1674" y="1000"/>
+        </scene>
+        <!--Directions View Controller-->
+        <scene sceneID="aqf-sZ-dzl">
+            <objects>
+                <viewController id="bvh-V8-VTd" customClass="DirectionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yXe-KX-5eU"/>
+                        <viewControllerLayoutGuide type="bottom" id="SVB-b1-VdB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hSD-Pi-gLB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CvE-Z7-pjB">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wUu-NV-PQY">
+                        <barButtonItem key="rightBarButtonItem" title="List Directions" id="XVl-aU-RfF">
+                            <connections>
+                                <action selector="listDirectionsBarButtonPressed:" destination="bvh-V8-VTd" id="X2c-hd-r6O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="directionsMap" destination="CvE-Z7-pjB" id="N2i-QL-ktr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EeV-E7-cvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2289" y="1000"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Toh-R9-d0T">

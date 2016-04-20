@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0766FBD51CC70F9700136549 /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766FBD41CC70F9700136549 /* DirectionsViewController.m */; };
 		07F266211CBDC78E00621DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266201CBDC78E00621DD2 /* main.m */; };
 		07F266241CBDC78E00621DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266231CBDC78E00621DD2 /* AppDelegate.m */; };
 		07F266271CBDC78E00621DD2 /* POIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266261CBDC78E00621DD2 /* POIListViewController.m */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		0582F37D92861E89FD9681B9 /* Pods-POI Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POI Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POI Manager/Pods-POI Manager.debug.xcconfig"; sourceTree = "<group>"; };
+		0766FBD31CC70F9700136549 /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
+		0766FBD41CC70F9700136549 /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
 		07F2661C1CBDC78E00621DD2 /* POI Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POI Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F266201CBDC78E00621DD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07F266221CBDC78E00621DD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				07F266261CBDC78E00621DD2 /* POIListViewController.m */,
 				07F2666D1CBE25D200621DD2 /* MapViewController.h */,
 				07F2666E1CBE25D200621DD2 /* MapViewController.m */,
+				0766FBD31CC70F9700136549 /* DirectionsViewController.h */,
+				0766FBD41CC70F9700136549 /* DirectionsViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -261,6 +266,11 @@
 				TargetAttributes = {
 					07F2661B1CBDC78E00621DD2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -364,6 +374,7 @@
 				07F266C11CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.m in Sources */,
 				07F266211CBDC78E00621DD2 /* main.m in Sources */,
 				07F2666F1CBE25D200621DD2 /* MapViewController.m in Sources */,
+				0766FBD51CC70F9700136549 /* DirectionsViewController.m in Sources */,
 				07F266981CBE2D9E00621DD2 /* POIRecord.m in Sources */,
 				07F266911CBE2CA200621DD2 /* Contact+CoreDataProperties.m in Sources */,
 				07F2668E1CBE2CA200621DD2 /* Menu.m in Sources */,
