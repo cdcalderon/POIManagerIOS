@@ -25,6 +25,9 @@ static NSString * const kCLIENTID = @"RODUBYAI1CMKTSLDI04NLRU53HXLKSWR43GYICGD3C
 
 static NSString * const kCLIENTSECRET = @"VG5P3M0XMPZ1ZHMW3UTUJHM2R3QPSU4FATDKCKYLGC1IY5VS";
 
+#define latitudeOffset 0.01
+#define longitudeOffset 0.01
+
 @interface POIListViewController () <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSArray *venues;
@@ -73,7 +76,7 @@ static NSString * const kCLIENTSECRET = @"VG5P3M0XMPZ1ZHMW3UTUJHM2R3QPSU4FATDKCK
     
     [self.locationManager stopUpdatingLocation];
     
-    [[POIFourSquareSessionManager sharedClient] GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude, location.coordinate.longitude] parameters:@{@"client_id" : kCLIENTID, @"client_secret" : kCLIENTSECRET ,@"v": @"20140416"}
+    [[POIFourSquareSessionManager sharedClient] GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude + latitudeOffset, location.coordinate.longitude + longitudeOffset] parameters:@{@"client_id" : kCLIENTID, @"client_secret" : kCLIENTSECRET ,@"v": @"20140416"}
                                             success:^(NSURLSessionDataTask *task, id responseObject) {
                                                 NSLog(@"%@",responseObject);
                                                 NSArray *venues = responseObject;

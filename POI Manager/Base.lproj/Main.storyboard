@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--List View Controller-->
@@ -78,10 +79,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9wN-Hv-8Qp">
-                                <rect key="frame" x="0.0" y="56" width="600" height="433"/>
-                            </mapView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30c-CD-3D3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30c-CD-3D3">
                                 <rect key="frame" x="0.0" y="485" width="600" height="115"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-cn-epb">
@@ -98,12 +96,27 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="UkV-C4-1GX"/>
+                                </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndR-VK-23c">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndR-VK-23c">
                                 <rect key="frame" x="0.0" y="6" width="600" height="44"/>
                             </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rCo-hM-shh">
+                                <rect key="frame" x="0.0" y="58" width="600" height="427"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="30c-CD-3D3" secondAttribute="trailing" constant="-20" id="2T7-fW-Izl"/>
+                            <constraint firstItem="rCo-hM-shh" firstAttribute="top" secondItem="ndR-VK-23c" secondAttribute="bottom" constant="8" id="FAl-dK-aNs"/>
+                            <constraint firstItem="30c-CD-3D3" firstAttribute="bottom" secondItem="mhL-Bb-IS1" secondAttribute="bottomMargin" id="R3J-c3-nga"/>
+                            <constraint firstItem="30c-CD-3D3" firstAttribute="top" secondItem="rCo-hM-shh" secondAttribute="bottom" id="Y1e-PM-MUj"/>
+                            <constraint firstItem="rCo-hM-shh" firstAttribute="leading" secondItem="mhL-Bb-IS1" secondAttribute="leadingMargin" constant="-20" id="Z4p-bT-1Vv"/>
+                            <constraint firstItem="30c-CD-3D3" firstAttribute="leading" secondItem="mhL-Bb-IS1" secondAttribute="leadingMargin" constant="-20" id="cay-9U-9G3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rCo-hM-shh" secondAttribute="trailing" constant="-20" id="pNb-Th-3if"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="eNw-Pu-gMs">
@@ -116,7 +129,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="8Fe-cn-epb" id="sRZ-cM-Hj3"/>
-                        <outlet property="mapVIew" destination="9wN-Hv-8Qp" id="Own-wg-pRY"/>
+                        <outlet property="mapVIew" destination="rCo-hM-shh" id="znV-Ry-jx2"/>
                         <outlet property="nameLabel" destination="w8c-Zr-lkZ" id="5Lc-qz-Hx2"/>
                         <segue destination="bvh-V8-VTd" kind="push" identifier="mapToDIrectionsSegue" id="3Ba-if-6Az"/>
                     </connections>

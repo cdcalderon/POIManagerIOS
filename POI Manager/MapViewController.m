@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "Location.h"
 #import "FSCategory.h"
+#import "DirectionsViewController.h"
 
 @interface MapViewController ()
 
@@ -42,6 +43,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[DirectionsViewController class]]) {
+        DirectionsViewController *directionsVC = segue.destinationViewController;
+        directionsVC.venue = self.venue;
+    }
+}
 
 - (IBAction)showDirectionsBarButtonPressed:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"mapToDIrectionsSegue" sender:nil];
