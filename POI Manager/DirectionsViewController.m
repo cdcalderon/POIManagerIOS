@@ -7,6 +7,7 @@
 //
 
 #import "DirectionsViewController.h"
+#import "DirectionsLIstViewController.h"
 
 @interface DirectionsViewController ()
 
@@ -50,6 +51,18 @@
 }
 
 - (IBAction)listDirectionsBarButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"directionToLIstSegue" sender:nil];
+}
+
+#pragma mark - Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[DirectionsLIstViewController class]]) {
+        
+        DirectionsLIstViewController *dvc = segue.destinationViewController;
+        dvc.steps = self.steps;
+    }
 }
 
 #pragma mark - Directions Methods
