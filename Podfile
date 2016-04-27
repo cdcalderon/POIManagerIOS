@@ -8,5 +8,5 @@ pod 'MBProgressHUD', '~> 0.9.2'
 pod 'MMRecord', '~> 1.4.1'
 pod 'MagicalRecord', '~> 2.2'
 pod 'AFNetworking', '~> 2.6'
-pod 'MMDrawerController', '~> 0.5.7’
+pod 'MMDrawerController/MMDrawerVisualStates’, '~> 0.5.7’
 end

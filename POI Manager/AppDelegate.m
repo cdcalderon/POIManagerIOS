@@ -10,6 +10,7 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "MenuViewController.h"
 #import "POIListViewController.h"
+#import <MMDrawerVisualState.h>
 
 @interface AppDelegate ()
 
@@ -28,6 +29,13 @@
     [self.drawerController setMaximumLeftDrawerWidth:240.0];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [self.drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
+    
+    //Animation Options
+//      - slideVisualStateBlock
+//      - slideAndScaleVisualStateBlock
+//      - swingingDoorVisualStateBlock
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:self.drawerController];
