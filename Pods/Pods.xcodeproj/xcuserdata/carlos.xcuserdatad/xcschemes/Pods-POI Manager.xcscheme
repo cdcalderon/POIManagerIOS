@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7F11F604C252FEC3F3EEE5A7'
+               BlueprintIdentifier = 'F56E78FCC06E53DD2BB50099'
                BlueprintName = 'Pods-POI Manager'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-POI Manager.a'>

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "MenuViewController.h"
+#import "POIListViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,10 +17,28 @@
 
 @implementation AppDelegate
 
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"WorldTravelerModel"];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    MenuViewController *menuController = (MenuViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"MenuViewControllerID"];
+    POIListViewController *listViewController = (POIListViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"ListViewControllerID"];
+    
+    
+    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:listViewController leftDrawerViewController:menuController];
+    [self.drawerController setMaximumLeftDrawerWidth:240.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:self.drawerController];
+    
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"POIManagerModel"];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
