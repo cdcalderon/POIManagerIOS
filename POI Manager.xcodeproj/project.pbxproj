@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0724159E1CD8D6F40075A043 /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0724159D1CD8D6F40075A043 /* menuicon.png */; };
+		072415A11CD8E7190075A043 /* AddPOIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072415A01CD8E7190075A043 /* AddPOIViewController.m */; };
+		072415A41CD8E7380075A043 /* FavoritePOIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072415A31CD8E7380075A043 /* FavoritePOIViewController.m */; };
 		0766FBD51CC70F9700136549 /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766FBD41CC70F9700136549 /* DirectionsViewController.m */; };
 		07F266211CBDC78E00621DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266201CBDC78E00621DD2 /* main.m */; };
 		07F266241CBDC78E00621DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266231CBDC78E00621DD2 /* AppDelegate.m */; };
@@ -40,6 +42,10 @@
 /* Begin PBXFileReference section */
 		0582F37D92861E89FD9681B9 /* Pods-POI Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POI Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POI Manager/Pods-POI Manager.debug.xcconfig"; sourceTree = "<group>"; };
 		0724159D1CD8D6F40075A043 /* menuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon.png; sourceTree = "<group>"; };
+		0724159F1CD8E7190075A043 /* AddPOIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPOIViewController.h; sourceTree = "<group>"; };
+		072415A01CD8E7190075A043 /* AddPOIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPOIViewController.m; sourceTree = "<group>"; };
+		072415A21CD8E7380075A043 /* FavoritePOIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritePOIViewController.h; sourceTree = "<group>"; };
+		072415A31CD8E7380075A043 /* FavoritePOIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePOIViewController.m; sourceTree = "<group>"; };
 		0766FBD31CC70F9700136549 /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
 		0766FBD41CC70F9700136549 /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
 		07F2661C1CBDC78E00621DD2 /* POI Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POI Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +181,10 @@
 				07F28EB21CCF46A700BDC6C3 /* DirectionsLIstViewController.m */,
 				07F28EB41CD0FB6500BDC6C3 /* MenuViewController.h */,
 				07F28EB51CD0FB6500BDC6C3 /* MenuViewController.m */,
+				0724159F1CD8E7190075A043 /* AddPOIViewController.h */,
+				072415A01CD8E7190075A043 /* AddPOIViewController.m */,
+				072415A21CD8E7380075A043 /* FavoritePOIViewController.h */,
+				072415A31CD8E7380075A043 /* FavoritePOIViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -390,12 +400,14 @@
 				07F266C01CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m in Sources */,
 				07F2668D1CBE2CA200621DD2 /* Menu+CoreDataProperties.m in Sources */,
 				07F266241CBDC78E00621DD2 /* AppDelegate.m in Sources */,
+				072415A11CD8E7190075A043 /* AddPOIViewController.m in Sources */,
 				07F266C11CBF6FBD00621DD2 /* AFMMRecordResponseSerializer.m in Sources */,
 				07F266211CBDC78E00621DD2 /* main.m in Sources */,
 				07F28EB31CCF46A700BDC6C3 /* DirectionsLIstViewController.m in Sources */,
 				07F2666F1CBE25D200621DD2 /* MapViewController.m in Sources */,
 				0766FBD51CC70F9700136549 /* DirectionsViewController.m in Sources */,
 				07F266981CBE2D9E00621DD2 /* POIRecord.m in Sources */,
+				072415A41CD8E7380075A043 /* FavoritePOIViewController.m in Sources */,
 				07F266911CBE2CA200621DD2 /* Contact+CoreDataProperties.m in Sources */,
 				07F2668E1CBE2CA200621DD2 /* Menu.m in Sources */,
 			);
