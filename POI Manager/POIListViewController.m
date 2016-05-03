@@ -15,6 +15,7 @@
 #import "Location.h"
 #import "MapViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "AppDelegate.h"
 
 //Client id
 //RODUBYAI1CMKTSLDI04NLRU53HXLKSWR43GYICGD3CUPP0FN
@@ -138,5 +139,20 @@ static NSString * const kCLIENTSECRET = @"VG5P3M0XMPZ1ZHMW3UTUJHM2R3QPSU4FATDKCK
     
     [self.locationManager startUpdatingLocation];
 }
+
+- (IBAction)menuBarItemPressed:(UIBarButtonItem *)sender {
+    [[self drawControllerFromAppDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
+
+
+#pragma mark - DrawerController
+
+-(MMDrawerController *) drawControllerFromAppDelegate
+{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    return appDelegate.drawerController;
+}
+
 
 @end

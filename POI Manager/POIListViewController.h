@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItemPressed;
+- (IBAction)menuBarItemPressed:(UIBarButtonItem *)sender;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0724159E1CD8D6F40075A043 /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0724159D1CD8D6F40075A043 /* menuicon.png */; };
 		0766FBD51CC70F9700136549 /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766FBD41CC70F9700136549 /* DirectionsViewController.m */; };
 		07F266211CBDC78E00621DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266201CBDC78E00621DD2 /* main.m */; };
 		07F266241CBDC78E00621DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266231CBDC78E00621DD2 /* AppDelegate.m */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0582F37D92861E89FD9681B9 /* Pods-POI Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POI Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POI Manager/Pods-POI Manager.debug.xcconfig"; sourceTree = "<group>"; };
+		0724159D1CD8D6F40075A043 /* menuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon.png; sourceTree = "<group>"; };
 		0766FBD31CC70F9700136549 /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
 		0766FBD41CC70F9700136549 /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
 		07F2661C1CBDC78E00621DD2 /* POI Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POI Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 		07F2661F1CBDC78E00621DD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0724159D1CD8D6F40075A043 /* menuicon.png */,
 				07F266201CBDC78E00621DD2 /* main.m */,
 				07F266B31CBF68B100621DD2 /* POIManager-Prefix.pch */,
 			);
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F2662F1CBDC78E00621DD2 /* LaunchScreen.storyboard in Resources */,
+				0724159E1CD8D6F40075A043 /* menuicon.png in Resources */,
 				07F2662C1CBDC78E00621DD2 /* Assets.xcassets in Resources */,
 				07F2662A1CBDC78E00621DD2 /* Main.storyboard in Resources */,
 			);

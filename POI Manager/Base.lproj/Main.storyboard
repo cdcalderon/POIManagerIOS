@@ -52,6 +52,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oym-qV-8Qt">
+                        <barButtonItem key="leftBarButtonItem" image="menuicon.png" id="h6J-LN-UOp">
+                            <connections>
+                                <action selector="menuBarItemPressed:" destination="BYZ-38-t0r" id="sMN-T0-UXa"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Refresh!" id="Sx8-O3-nmF">
                             <connections>
                                 <action selector="refreshBarButtonItemPressed:" destination="BYZ-38-t0r" id="Lpt-un-xs8"/>
@@ -59,6 +64,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="menuBarButtonItemPressed" destination="h6J-LN-UOp" id="SfD-Gh-yiH"/>
                         <outlet property="tableView" destination="6lY-hA-G8Y" id="434-en-d83"/>
                         <segue destination="SBg-LP-LYa" kind="push" identifier="listToMapSegue" id="coF-eL-0OL"/>
                     </connections>
@@ -301,4 +307,7 @@
             <point key="canvasLocation" x="294" y="1844"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menuicon.png" width="22" height="20"/>
+    </resources>
 </document>
