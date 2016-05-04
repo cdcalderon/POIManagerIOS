@@ -43,7 +43,6 @@
     
     if (!self.listNavigationViewController){
         
-        
         MMDrawerController *drawController = [self drawControllerFromAppDelegate];
         self.listNavigationViewController = (UINavigationController *)drawController.centerViewController;
         [self.viewControllers addObject:self.listNavigationViewController];

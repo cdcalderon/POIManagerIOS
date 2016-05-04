@@ -343,7 +343,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tnb-QP-kT1"/>
+                    <navigationItem key="navigationItem" id="tnb-QP-kT1">
+                        <barButtonItem key="leftBarButtonItem" image="menuicon.png" id="tLV-rg-Etq">
+                            <connections>
+                                <action selector="barButtonItemPressed:" destination="Pue-qG-MgA" id="2YM-Wu-9Pg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MY0-aN-4pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,7 +384,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d8Z-Er-ppG"/>
+                    <navigationItem key="navigationItem" id="d8Z-Er-ppG">
+                        <barButtonItem key="leftBarButtonItem" image="menuicon.png" id="RoN-7S-oog">
+                            <connections>
+                                <action selector="barButtonItemPressed:" destination="fNb-sI-una" id="919-8W-JQ4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="k2R-04-TH4" id="jUl-mS-hjo"/>
                     </connections>

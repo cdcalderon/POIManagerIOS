@@ -10,5 +10,6 @@
 
 @interface FavoritePOIViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)barButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end

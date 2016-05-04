@@ -7,6 +7,7 @@
 //
 
 #import "AddPOIViewController.h"
+#import "AppDelegate.h"
 
 @interface AddPOIViewController ()
 
@@ -35,5 +36,20 @@
 */
 
 - (IBAction)saveButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)barButtonItemPressed:(UIBarButtonItem *)sender {
+
+    [[self drawControllerFromDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
+
+
+#pragma mark - DrawController Methods
+
+-(MMDrawerController *)drawControllerFromDelegate
+{
+    AppDelegate *appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    
+    return appDelegate.drawerController;
 }
 @end
