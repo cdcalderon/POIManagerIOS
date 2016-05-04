@@ -339,19 +339,11 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="saveButtonPressed:" destination="Pue-qG-MgA" eventType="touchUpInside" id="m9Y-yz-AUA"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tnb-QP-kT1"/>
-                    <connections>
-                        <outlet property="phoneNumberTextField" destination="XW8-oT-MxO" id="jAQ-nr-wBG"/>
-                        <outlet property="poiNameTextField" destination="rZf-pJ-xdV" id="YfR-H2-pqj"/>
-                        <outlet property="typeOfFoodTextField" destination="3NR-DY-nV4" id="fxS-hI-ODO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MY0-aN-4pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -398,7 +390,7 @@
         <!--Navigation Controller-->
         <scene sceneID="wZv-wN-M42">
             <objects>
-                <navigationController storyboardIdentifier="FavoritePOIViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="Ixx-cd-5yU" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddPOIViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="Ixx-cd-5yU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x7-XD-RaF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -416,7 +408,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vOR-vd-1ps">
             <objects>
-                <navigationController storyboardIdentifier="AddPOIViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="ui6-xC-jqQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FavoritePOIViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="ui6-xC-jqQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="264-IX-0y3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -14,6 +14,11 @@
 
 @property (strong, nonatomic) NSMutableArray *viewControllers;
 @property (strong, nonatomic) UINavigationController *listNavigationViewController;
+
+@property (strong, nonatomic) UINavigationController *favoritePOINavigationController;
+@property (strong, nonatomic) UINavigationController *addPOINavigationController;
+
+
 @end
 
 @implementation MenuViewController
@@ -34,12 +39,23 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    
     if (!self.listNavigationViewController){
         
         
         MMDrawerController *drawController = [self drawControllerFromAppDelegate];
         self.listNavigationViewController = (UINavigationController *)drawController.centerViewController;
         [self.viewControllers addObject:self.listNavigationViewController];
+    }
+    
+    if (!self.favoritePOINavigationController) {
+        self.favoritePOINavigationController = (UINavigationController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"FavoritePOIViewControllerID"];
+        [self.viewControllers addObject:self.favoritePOINavigationController];
+    }
+    if (!self.addPOINavigationController) {
+        self.addPOINavigationController = (UINavigationController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AddPOIViewControllerID"];
+        [self.viewControllers addObject:self.addPOINavigationController];
     }
     
     [self.tableView reloadData];
@@ -63,6 +79,11 @@
     
     if (indexPath.row == 0){
         cell.textLabel.text = @"Home";
+    } else if (indexPath.row == 1) {
+        cell.textLabel.text = @"Favorites";
+    }
+    else if (indexPath.row == 2) {
+        cell.textLabel.text = @"Add";
     }
     
     return cell;
