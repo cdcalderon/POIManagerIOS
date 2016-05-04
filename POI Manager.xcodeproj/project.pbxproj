@@ -10,6 +10,8 @@
 		0724159E1CD8D6F40075A043 /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0724159D1CD8D6F40075A043 /* menuicon.png */; };
 		072415A11CD8E7190075A043 /* AddPOIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072415A01CD8E7190075A043 /* AddPOIViewController.m */; };
 		072415A41CD8E7380075A043 /* FavoritePOIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072415A31CD8E7380075A043 /* FavoritePOIViewController.m */; };
+		072415A91CD987510075A043 /* Venue+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 072415A61CD987510075A043 /* Venue+CoreDataProperties.m */; };
+		072415AA1CD987510075A043 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 072415A81CD987510075A043 /* Venue.m */; };
 		0766FBD51CC70F9700136549 /* DirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766FBD41CC70F9700136549 /* DirectionsViewController.m */; };
 		07F266211CBDC78E00621DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266201CBDC78E00621DD2 /* main.m */; };
 		07F266241CBDC78E00621DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266231CBDC78E00621DD2 /* AppDelegate.m */; };
@@ -28,8 +30,6 @@
 		07F266901CBE2CA200621DD2 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266821CBE2CA200621DD2 /* Location.m */; };
 		07F266911CBE2CA200621DD2 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266841CBE2CA200621DD2 /* Contact+CoreDataProperties.m */; };
 		07F266921CBE2CA200621DD2 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266861CBE2CA200621DD2 /* Contact.m */; };
-		07F266931CBE2CA200621DD2 /* Venue+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266881CBE2CA200621DD2 /* Venue+CoreDataProperties.m */; };
-		07F266941CBE2CA200621DD2 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F2668A1CBE2CA200621DD2 /* Venue.m */; };
 		07F266981CBE2D9E00621DD2 /* POIRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266971CBE2D9E00621DD2 /* POIRecord.m */; };
 		07F266B21CBF60C800621DD2 /* POIFourSquareSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266B11CBF60C800621DD2 /* POIFourSquareSessionManager.m */; };
 		07F266C01CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F266BD1CBF6FBD00621DD2 /* AFMMRecordResponseSerializationMapper.m */; };
@@ -46,6 +46,10 @@
 		072415A01CD8E7190075A043 /* AddPOIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPOIViewController.m; sourceTree = "<group>"; };
 		072415A21CD8E7380075A043 /* FavoritePOIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritePOIViewController.h; sourceTree = "<group>"; };
 		072415A31CD8E7380075A043 /* FavoritePOIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePOIViewController.m; sourceTree = "<group>"; };
+		072415A51CD987510075A043 /* Venue+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+CoreDataProperties.h"; sourceTree = "<group>"; };
+		072415A61CD987510075A043 /* Venue+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+CoreDataProperties.m"; sourceTree = "<group>"; };
+		072415A71CD987510075A043 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		072415A81CD987510075A043 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		0766FBD31CC70F9700136549 /* DirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsViewController.h; sourceTree = "<group>"; };
 		0766FBD41CC70F9700136549 /* DirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsViewController.m; sourceTree = "<group>"; };
 		07F2661C1CBDC78E00621DD2 /* POI Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POI Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,10 +82,6 @@
 		07F266841CBE2CA200621DD2 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
 		07F266851CBE2CA200621DD2 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		07F266861CBE2CA200621DD2 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		07F266871CBE2CA200621DD2 /* Venue+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+CoreDataProperties.h"; sourceTree = "<group>"; };
-		07F266881CBE2CA200621DD2 /* Venue+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+CoreDataProperties.m"; sourceTree = "<group>"; };
-		07F266891CBE2CA200621DD2 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
-		07F2668A1CBE2CA200621DD2 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		07F266961CBE2D9E00621DD2 /* POIRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIRecord.h; sourceTree = "<group>"; };
 		07F266971CBE2D9E00621DD2 /* POIRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIRecord.m; sourceTree = "<group>"; };
 		07F266B01CBF60C800621DD2 /* POIFourSquareSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIFourSquareSessionManager.h; sourceTree = "<group>"; };
@@ -201,10 +201,12 @@
 		07F266951CBE2CAB00621DD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				072415A51CD987510075A043 /* Venue+CoreDataProperties.h */,
+				072415A61CD987510075A043 /* Venue+CoreDataProperties.m */,
+				072415A71CD987510075A043 /* Venue.h */,
+				072415A81CD987510075A043 /* Venue.m */,
 				07F266961CBE2D9E00621DD2 /* POIRecord.h */,
 				07F266971CBE2D9E00621DD2 /* POIRecord.m */,
-				07F266891CBE2CA200621DD2 /* Venue.h */,
-				07F2668A1CBE2CA200621DD2 /* Venue.m */,
 				07F266771CBE2CA200621DD2 /* FSCategory+CoreDataProperties.h */,
 				07F266781CBE2CA200621DD2 /* FSCategory+CoreDataProperties.m */,
 				07F266791CBE2CA200621DD2 /* FSCategory.h */,
@@ -221,8 +223,6 @@
 				07F266841CBE2CA200621DD2 /* Contact+CoreDataProperties.m */,
 				07F266851CBE2CA200621DD2 /* Contact.h */,
 				07F266861CBE2CA200621DD2 /* Contact.m */,
-				07F266871CBE2CA200621DD2 /* Venue+CoreDataProperties.h */,
-				07F266881CBE2CA200621DD2 /* Venue+CoreDataProperties.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -389,8 +389,6 @@
 				07F2668C1CBE2CA200621DD2 /* FSCategory.m in Sources */,
 				07F266271CBDC78E00621DD2 /* POIListViewController.m in Sources */,
 				07F2668F1CBE2CA200621DD2 /* Location+CoreDataProperties.m in Sources */,
-				07F266941CBE2CA200621DD2 /* Venue.m in Sources */,
-				07F266931CBE2CA200621DD2 /* Venue+CoreDataProperties.m in Sources */,
 				07F266741CBE27E400621DD2 /* POIManagerModel.xcdatamodeld in Sources */,
 				07F266B21CBF60C800621DD2 /* POIFourSquareSessionManager.m in Sources */,
 				07F266901CBE2CA200621DD2 /* Location.m in Sources */,
@@ -406,8 +404,10 @@
 				07F28EB31CCF46A700BDC6C3 /* DirectionsLIstViewController.m in Sources */,
 				07F2666F1CBE25D200621DD2 /* MapViewController.m in Sources */,
 				0766FBD51CC70F9700136549 /* DirectionsViewController.m in Sources */,
+				072415A91CD987510075A043 /* Venue+CoreDataProperties.m in Sources */,
 				07F266981CBE2D9E00621DD2 /* POIRecord.m in Sources */,
 				072415A41CD8E7380075A043 /* FavoritePOIViewController.m in Sources */,
+				072415AA1CD987510075A043 /* Venue.m in Sources */,
 				07F266911CBE2CA200621DD2 /* Contact+CoreDataProperties.m in Sources */,
 				07F2668E1CBE2CA200621DD2 /* Menu.m in Sources */,
 			);

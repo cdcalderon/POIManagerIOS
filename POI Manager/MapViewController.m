@@ -10,6 +10,8 @@
 #import "Location.h"
 #import "FSCategory.h"
 #import "DirectionsViewController.h"
+#import <MagicalRecord/MagicalRecord.h>
+
 
 @interface MapViewController ()
 
@@ -55,5 +57,9 @@
 
 - (IBAction)showDirectionsBarButtonPressed:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"mapToDIrectionsSegue" sender:nil];
+}
+- (IBAction)favoriteButtonPressed:(UIButton *)sender {
+    self.venue.favorite = [NSNumber numberWithBool:YES];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfAndWait];
 }
 @end

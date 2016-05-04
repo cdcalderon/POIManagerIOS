@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Venue+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Venue+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:Venue.h">
+   </FileRef>
+   <FileRef
+      location = "group:Venue.m">
+   </FileRef>
+   <FileRef
       location = "group:POI Manager.xcodeproj">
    </FileRef>
    <FileRef
