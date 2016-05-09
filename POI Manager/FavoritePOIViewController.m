@@ -8,8 +8,12 @@
 
 #import "FavoritePOIViewController.h"
 #import "AppDelegate.h"
+#import "Venue.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 @interface FavoritePOIViewController ()
+
+@property (strong, nonatomic) NSMutableArray *favorites;
 
 @end
 
@@ -18,6 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    if (!self.favorites) {
+        self.favorites = [[NSMutableArray alloc] init];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,15 +37,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewDidAppear:(BOOL)animated
+{
+    NSPredicate *predicateForFavorites = [NSPredicate predicateWithFormat:@"favorite == %@", [NSNumber numberWithBool:YES]];
+    self.favorites = [[Venue MR_findAllWithPredicate:predicateForFavorites inContext:[NSManagedObjectContext MR_defaultContext]] mutableCopy];
+    
+    [self.tableView reloadData];
 }
-*/
 
 - (IBAction)barButtonItemPressed:(UIBarButtonItem *)sender {
 
@@ -48,4 +58,21 @@
 
     return appDelegate.drawerController;
 }
+
+#pragma mark - TableView Delegate Methods
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.favorites count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    Venue *venue = self.favorites[indexPath.row];
+    cell.textLabel.text = venue.name;
+    
+    return cell;
+}
+
 @end

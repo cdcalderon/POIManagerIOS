@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavoritePOIViewController : UIViewController
+@interface FavoritePOIViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)barButtonItemPressed:(UIBarButtonItem *)sender;
 
